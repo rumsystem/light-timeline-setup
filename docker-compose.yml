@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  postgres:
+    image: dockerhub.qingcloud.com/pressone/postgres
+    hostname: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pg-init-scripts:/docker-entrypoint-initdb.d
+      - ./postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_MULTIPLE_DATABASES: timeline
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: e8b50fddddf04ee439f12851f5275222
+
+  light-timeline:
+    image: 'dockerhub.qingcloud.com/pressone/light-timeline'
+    command: bash -c "yarn start-prod"
+    restart: 'always'
+    ports:
+      - '9000:9000'
+    volumes:
+      - ./config.light-timeline.js:/server/config.js:ro
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '5'
+        max-size: '10m'
+    depends_on:
+      - postgres
