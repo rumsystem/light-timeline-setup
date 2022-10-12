@@ -1,7 +1,7 @@
 module.exports = {
   database: {
     host: "postgres",
-    port: '5432',
+    port: '5430',
     database: "timeline",
     user: "postgres",
     password: "e8b50fddddf04ee439f12851f5275222",
