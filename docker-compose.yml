@@ -8,7 +8,7 @@ services:
       - ./pg-init-scripts:/docker-entrypoint-initdb.d
       - ./postgresql:/var/lib/postgresql/data
     environment:
-      POSTGRES_MULTIPLE_DATABASES: timeline
+      POSTGRES_MULTIPLE_DATABASES: all_in_one_timeline
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: e8b50fddddf04ee439f12851f5275222
 
