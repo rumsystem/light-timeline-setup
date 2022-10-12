@@ -19,7 +19,7 @@ services:
     command: bash -c "yarn start-prod"
     restart: 'always'
     ports:
-      - '9000:9000'
+      - '9060:9060'
     volumes:
       - ./config.light-timeline.js:/server/config.js:ro
     logging:
