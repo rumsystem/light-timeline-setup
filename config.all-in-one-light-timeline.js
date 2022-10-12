@@ -2,7 +2,7 @@ module.exports = {
   database: {
     host: "postgres",
     port: '5432',
-    database: "timeline",
+    database: "all_in_one_timeline",
     user: "postgres",
     password: "e8b50fddddf04ee439f12851f5275222",
     dialect: "postgres"

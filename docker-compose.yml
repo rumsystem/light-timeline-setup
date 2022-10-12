@@ -12,14 +12,14 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: e8b50fddddf04ee439f12851f5275222
 
-  light-timeline:
-    image: 'dockerhub.qingcloud.com/pressone/light-timeline'
+  all-in-one-light-timeline:
+    image: 'dockerhub.qingcloud.com/pressone/all-in-one-light-timeline'
     command: bash -c "yarn start-prod"
     restart: 'always'
     ports:
       - '9060:9000'
     volumes:
-      - ./config.light-timeline.js:/server/config.js:ro
+      - ./config.all-in-one-light-timeline.js:/server/config.js:ro
     logging:
       driver: 'json-file'
       options:
