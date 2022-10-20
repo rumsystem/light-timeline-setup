@@ -8,7 +8,7 @@ module.exports = {
     dialect: "postgres"
   },
   polling: {
-    limit: 80,
+    limit: 120,
     maxIndexingUnloadedGroup: 3,
   },
   userRelation: {
