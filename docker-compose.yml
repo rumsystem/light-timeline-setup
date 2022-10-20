@@ -19,7 +19,7 @@ services:
     ports:
       - '9060:9000'
     volumes:
-      - ./config.timeline.js:/server/config.js:ro
+      - ./config.js:/server/config.js:ro
     logging:
       driver: 'json-file'
       options:
