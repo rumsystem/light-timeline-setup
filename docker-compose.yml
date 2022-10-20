@@ -19,7 +19,7 @@ services:
     ports:
       - '6090:9000'
     volumes:
-      - ./config.feed.js:/server/config.js:ro
+      - ./config.js:/server/config.js:ro
     logging:
       driver: 'json-file'
       options:
