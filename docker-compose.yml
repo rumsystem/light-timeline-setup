@@ -2,7 +2,7 @@ version: '3'
 
 services:
   postgres:
-    image: dockerhub.qingcloud.com/pressone/postgres
+    image: postgres
     hostname: postgres
     volumes:
       - ./pg-init-scripts:/docker-entrypoint-initdb.d
@@ -13,7 +13,7 @@ services:
       POSTGRES_PASSWORD: e8b50fddddf04ee439f12851f5275222
 
   feed:
-    image: 'dockerhub.qingcloud.com/pressone/feed'
+    image: 'btclinkgrt/quorum-feed'
     command: bash -c "yarn start-prod"
     restart: 'always'
     ports:
