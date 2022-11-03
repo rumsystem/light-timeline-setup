@@ -1,4 +1,3 @@
-docker login -u prs-os -p pressone dockerhub.qingcloud.com
-docker pull dockerhub.qingcloud.com/pressone/postgres
-docker pull dockerhub.qingcloud.com/pressone/timeline
+docker pull postgres
+docker pull btclinkgrt/quorum-timeline
 docker-compose down --remove-orphans && docker-compose up -d
