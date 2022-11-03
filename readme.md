@@ -40,7 +40,7 @@ docker-compose version 1.27.4, build 40524192
 ## 3. Get source code
 
 ```
-git clone https://github.com/raimonfuns/light-timeline-setup.git
+git clone https://github.com/rumsystem/light-timeline-setup.git
 cd light-timeline-setup
 ```
 
