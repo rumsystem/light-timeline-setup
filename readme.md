@@ -67,4 +67,10 @@ If the public IP of your machine is `90.61.37.242`, then you can use `http://90.
 
 ```
 ./down.sh
+
+# Stopping light-timeline-setup_timeline_1 ... done
+# Stopping light-timeline-setup_postgres_1 ... done
+# Removing light-timeline-setup_timeline_1 ... done
+# Removing light-timeline-setup_postgres_1 ... done
+# Removing network light-timeline-setup_default
 ```
