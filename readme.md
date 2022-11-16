@@ -2,6 +2,10 @@
 
 ## 1. Install Docker
 
+- [How to install Docker on Ubuntu?](https://yeasy.gitbook.io/docker_practice/install/ubuntu)
+- [How to install Docker on Debian?](https://yeasy.gitbook.io/docker_practice/install/debian)
+- [How to install Docker on CentOS?](https://yeasy.gitbook.io/docker_practice/install/centos)
+
 You can execute the following command to test whether Docker is installed successfully
 
 ```bash
@@ -24,6 +28,8 @@ This message shows that your installation appears to be working correctly.
 ```
 
 ## 2. Install Docker Compose
+
+[How to install Docker Compose?](https://yeasy.gitbook.io/docker_practice/compose/install)
 
 You can execute the following command to test whether Docker Compose is installed successfully
 
