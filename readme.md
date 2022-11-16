@@ -43,7 +43,7 @@ output
 docker-compose version 1.27.4, build 40524192
 ```
 
-## 3. Get source code
+## 3. Get deploy code
 
 ```
 git clone https://github.com/rumsystem/light-timeline-setup.git
