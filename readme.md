@@ -48,6 +48,7 @@ docker-compose version 1.27.4, build 40524192
 ```
 git clone https://github.com/rumsystem/light-timeline-setup.git
 cd light-timeline-setup
+git checkout feed
 ```
 
 ## 4. Deploy
