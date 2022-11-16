@@ -61,3 +61,15 @@ cd light-timeline-setup
 Congratulations, the deployment is complete and the service is running on port 9060.
 
 If the public IP of your machine is `90.61.37.242`, then you can use `http://90.61.37.242:9060` to access
+
+## 6. Shutdown server
+
+```
+./down.sh
+
+# Stopping light-timeline-setup_timeline_1 ... done
+# Stopping light-timeline-setup_postgres_1 ... done
+# Removing light-timeline-setup_timeline_1 ... done
+# Removing light-timeline-setup_postgres_1 ... done
+# Removing network light-timeline-setup_default
+```
