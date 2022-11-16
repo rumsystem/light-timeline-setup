@@ -62,3 +62,9 @@ git checkout feed
 Congratulations, the deployment is complete and the service is running on port 6090.
 
 If the public IP of your machine is `90.61.37.242`, then you can use `http://90.61.37.242:6090` to access
+
+## 6. Shutdown server
+
+```
+./down.sh
+```
