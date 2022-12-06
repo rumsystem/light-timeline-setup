@@ -5,6 +5,8 @@ if [[ ! -v DOMAIN ]]; then
   exit 1
 fi
 
+sed "s/DOMAIN/$DOMAIN/g" nginx.conf > sed.nginx.conf
+
 if ! [ -x "$(command -v docker-compose)" ]; then
   echo 'Error: docker-compose is not installed.' >&2
   exit 1

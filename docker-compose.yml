@@ -33,13 +33,11 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    environment:
-      - DOMAIN=${DOMAIN}
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/mysite.template:ro
+      - ./sed.nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
-    command: ./run_nginx.sh
+    command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
     logging:
       driver: 'json-file'
       options:
