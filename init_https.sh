@@ -42,7 +42,7 @@ for domain in ${domains[@]}; do
 done
 
 echo "### Start services ..."
-docker-compose -f docker-compose.yml -f docker-compose-https.yml up -d --force-recreate --no-deps nginx cnft
+docker-compose -f docker-compose.yml -f docker-compose-https.yml up -d --force-recreate --no-deps nginx feed postgres
 echo
 
 waiting_time_for_nginx_starting=30 
