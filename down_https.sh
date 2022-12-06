@@ -1,1 +1,0 @@
-sudo docker-compose -f docker-compose.yml -f docker-compose-https.yml down --remove-orphans
