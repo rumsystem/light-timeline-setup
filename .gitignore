@@ -1,3 +1,4 @@
 postgresql
-sed.nginx.conf
 certbot
+nginx.conf
+config.js
