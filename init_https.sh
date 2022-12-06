@@ -74,7 +74,7 @@ for domain in ${domains[@]}; do
       --force-renewal" certbot --register-unsafely-without-email
   echo
 done
-docker-compose -f docker-compose.yml -f docker-compose-https.yml start certbot
+docker-compose -f docker-compose.yml -f docker-compose-https.yml up -d --force-recreate --no-deps certbot
 
 echo "### Recreate nginx ..."
 docker-compose -f docker-compose.yml -f docker-compose-https.yml up -d --force-recreate --no-deps nginx
