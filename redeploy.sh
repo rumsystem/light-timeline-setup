@@ -1,5 +1,5 @@
 if [[ ! -v DOMAIN ]]; then
-  echo "DOMAIN is not set, eg: DOMAIN=google.com && ./redeploy.sh"
+  echo "DOMAIN is not set, example: export DOMAIN=google.com && ./redeploy.sh"
   exit 1
 fi
 

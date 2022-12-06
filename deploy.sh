@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ ! -v DOMAIN ]]; then
-    echo "DOMAIN is not set, eg: DOMAIN=google.com && ./deploy.sh"
-    exit 1
+  echo "DOMAIN is not set, example: export DOMAIN=google.com && ./deploy.sh"
+  exit 1
 fi
 
 if ! [ -x "$(command -v docker-compose)" ]; then
