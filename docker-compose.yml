@@ -15,8 +15,6 @@ services:
     image: 'btclinkgrt/quorum-feed'
     command: bash -c "yarn start-prod"
     restart: 'always'
-    ports:
-      - '6090:9000'
     volumes:
       - ./config.js:/server/config.js:ro
     logging:
