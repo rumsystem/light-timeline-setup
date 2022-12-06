@@ -12,6 +12,8 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
+docker-compose down --remove-orphans
+
 domains=($DOMAIN)
 rsa_key_size=4096
 data_path="./certbot"
@@ -22,7 +24,7 @@ for domain in ${domains[@]}; do
   if [ -d "$data_path/conf/live/$domain" ]; then
     docker pull postgres
     docker pull btclinkgrt/quorum-feed
-    docker-compose down --remove-orphans && docker-compose up -d
+    docker-compose up -d
     exit
   fi
 done
