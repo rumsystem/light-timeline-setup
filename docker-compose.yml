@@ -2,7 +2,7 @@ version: '3'
 
 services:
   postgres:
-    image: postgres
+    image: postgres:12.0-alpine
     hostname: postgres
     volumes:
       - ./pg-init-scripts:/docker-entrypoint-initdb.d

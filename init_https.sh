@@ -1,11 +1,16 @@
 #!/bin/bash
 
+if [[ ! -v DOMAIN ]]; then
+    echo "DOMAIN is not set, eg: DOMAIN=google.com"
+    exit 1
+fi
+
 if ! [ -x "$(command -v docker-compose)" ]; then
   echo 'Error: docker-compose is not installed.' >&2
   exit 1
 fi
 
-domains=(os-feed.base.one)
+domains=($DOMAIN)
 rsa_key_size=4096
 data_path="./data/certbot"
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
