@@ -48,30 +48,31 @@ docker-compose version 1.27.4, build 40524192
 ```
 git clone https://github.com/rumsystem/light-timeline-setup.git
 cd light-timeline-setup
-git fetch origin feed
-git checkout feed
 ```
 
 ## 4. Deploy
+If your domain is `feed.com`, then use this command to deploy
 
 ```
-./deploy.sh
+export DOMAIN=feed.com && ./deploy.sh
 ```
 
 ## 5. Done
 
-Congratulations, the deployment is complete and the service is running on port 6090.
-
-If the public IP of your machine is `90.61.37.242`, then you can use `http://90.61.37.242:6090` to access
+Congratulations, the deployment is complete and you can access it by `feed.com`.
 
 ## 6. Shutdown server
 
 ```
 ./down.sh
 
-# Stopping light-timeline-setup_timeline_1 ... done
-# Stopping light-timeline-setup_postgres_1 ... done
-# Removing light-timeline-setup_timeline_1 ... done
-# Removing light-timeline-setup_postgres_1 ... done
-# Removing network light-timeline-setup_default
+Stopping light-timeline-setup_feed_1     ... done
+Stopping light-timeline-setup_nginx_1    ... done
+Stopping light-timeline-setup_postgres_1 ... done
+Stopping light-timeline-setup_certbot_1  ... done
+Removing light-timeline-setup_feed_1     ... done
+Removing light-timeline-setup_nginx_1    ... done
+Removing light-timeline-setup_postgres_1 ... done
+Removing light-timeline-setup_certbot_1  ... done
+Removing network light-timeline-setup_default
 ```
