@@ -1,10 +1,10 @@
 module.exports = {
-  
+
   title: '',
 
   logo: '',
 
-  version: '',
+  version: '1.0.0',
 
   database: {
     host: "postgres",
