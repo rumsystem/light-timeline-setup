@@ -48,6 +48,8 @@ docker-compose version 1.27.4, build 40524192
 ```
 git clone https://github.com/rumsystem/light-timeline-setup.git
 cd light-timeline-setup
+git fetch origin feed
+git checkout feed
 ```
 
 ## 4. Deploy
@@ -58,9 +60,9 @@ cd light-timeline-setup
 
 ## 5. Done
 
-Congratulations, the deployment is complete and the service is running on port 9060.
+Congratulations, the deployment is complete and the service is running on port 6090.
 
-If the public IP of your machine is `90.61.37.242`, then you can use `http://90.61.37.242:9060` to access
+If the public IP of your machine is `90.61.37.242`, then you can use `http://90.61.37.242:6090` to access
 
 ## 6. Shutdown server
 
